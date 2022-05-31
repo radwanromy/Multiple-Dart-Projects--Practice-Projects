@@ -19,7 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
         appBar: AppBar(
           title: Text(
-            "BMI Calculator",
+            "Body Mass Index (BMI) Calculator",
             style:
                 TextStyle(color: accentHexColor, fontWeight: FontWeight.w300),
           ),
@@ -32,7 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Column(
             children: [
               SizedBox(
-                height: 20,
+                height: 30,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -42,7 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: TextField(
                       controller: _heightController,
                       style: TextStyle(
-                          fontSize: 42,
+                          fontSize: 32,
                           fontWeight: FontWeight.w300,
                           color: accentHexColor),
                       keyboardType: TextInputType.number,
@@ -62,7 +62,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       controller: _weightController,
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                          fontSize: 42,
+                          fontSize: 32,
                           fontWeight: FontWeight.w300,
                           color: accentHexColor),
                       keyboardType: TextInputType.number,
@@ -88,11 +88,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   setState(() {
                     _bmiResult = _w / (_h * _h);
                     if (_bmiResult > 25) {
-                      _textResult = "You\'re over weight";
+                      _textResult = "You're over weight";
                     } else if (_bmiResult >= 18.5 && _bmiResult <= 25) {
                       _textResult = "You have normal weight";
                     } else {
-                      _textResult = "You\'re under weight";
+                      _textResult = "You're under weight";
                     }
                   });
                 },
@@ -130,13 +130,17 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   )),
               SizedBox(
-                height: 10,
+                height: 50,
               ),
               LeftBar(
                 barWidth: 40,
               ),
               SizedBox(
-                height: 20,
+                height: 0,
+              ),
+              RightBar(barWidth: 170),
+              SizedBox(
+                height: 00,
               ),
               LeftBar(barWidth: 70),
               SizedBox(
@@ -150,7 +154,11 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               RightBar(barWidth: 70),
               SizedBox(
-                height: 50,
+                height: 20,
+              ),
+              RightBar(barWidth: 90),
+              SizedBox(
+                height: 20,
               ),
               RightBar(barWidth: 70),
             ],
