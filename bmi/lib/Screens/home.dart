@@ -136,11 +136,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 barWidth: 40,
               ),
               SizedBox(
-                height: 0,
-              ),
-              RightBar(barWidth: 170),
-              SizedBox(
-                height: 00,
+                height: 020,
               ),
               LeftBar(barWidth: 70),
               SizedBox(
