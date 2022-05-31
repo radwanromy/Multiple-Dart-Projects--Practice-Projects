@@ -124,7 +124,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Text(
                       _textResult,
                       style: TextStyle(
-                          fontSize: 32,
+                          fontSize: 22,
                           fontWeight: FontWeight.w400,
                           color: accentHexColor),
                     ),
